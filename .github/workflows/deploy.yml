@@ -5,12 +5,21 @@ jobs:
   fisrt-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Hola Mundo
-        run: echo "Hola Mundo"
+      - name: Ejecutar comando antes de la accion
+        run: ls -ls 
+
+      - name: Actions Example
+        run: actions/checkout@v4
+  
+      - name: Ejecutar comando despues de la accion
+        run: ls -ls
 
   second-job:
+    env:
+        VAR: Codigo Facilito
+    if: true
     needs: fisrt-job
     runs-on: ubuntu-latest
     steps:
       - name: Hola Mundo
-        run: echo "Hola Mundo Segundo Job"
+        run: echo "Hola Mundo $VAR"
