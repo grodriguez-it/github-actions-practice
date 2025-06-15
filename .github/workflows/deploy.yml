@@ -36,3 +36,5 @@ jobs:
     steps:
       - name: Hola Mundo
         run: echo "Hola Mundo $nombre"
+      - name: Imprimir salida
+        run: echo "$salida"
