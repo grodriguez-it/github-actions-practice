@@ -1,3 +1,4 @@
+name: Mis Workflows
 on: push
 
 jobs:
@@ -6,3 +7,10 @@ jobs:
     steps:
       - name: Hola Mundo
         run: echo "Hola Mundo"
+
+  second-job:
+    needs: fisrt-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hola Mundo
+        run: echo "Hola Mundo Segundo Job"
