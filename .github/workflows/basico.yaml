@@ -1,15 +1,15 @@
-name: "Deploy Basico"
+name: "Deploy Basico" # Nombre del workflow
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main"] # Este workflow se activa automáticamente cada vez que se hace un push a la rama 'main'
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-      steps:
-        - run: echo "Hacemos pull del código"
-        - run: echo "Correr migraciones"
-        - run: echo "Generar binario"
-        - run: echo "Publicar versión"
-        - run: echo "Publicar versión en master"
+  deploy-codigofacilito: # Define un "job" o tarea principal llamada 'deploy-codigofacilito'
+    runs-on: ubuntu-latest # Este job se ejecutará en una máquina virtual de Ubuntu
+    steps: # Los pasos que este job va a realizar
+      - run: echo "Hacemos pull del código" # Paso 1: Mensaje de "pull del código"
+      - run: echo "Correr migraciones"     # Paso 2: Mensaje de "correr migraciones"
+      - run: echo "Generar binario"       # Paso 3: Mensaje de "generar binario"
+      - run: echo "Publicar versión"      # Paso 4: Mensaje de "publicar versión"
+      - run: echo "Publicar versión en master" # Paso 5: Mensaje de "publicar versión en master"
