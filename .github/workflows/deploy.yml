@@ -5,8 +5,8 @@ jobs:
   fisrt-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Ejecutar comando antes de la accion
-        run: ls -la 
+      #- name: Ejecutar comando antes de la accion
+       # run: ls -la 
       - name: Actions Example
         run: actions/checkout@v4
       - name: Ejecutar comando despues de la accion
