@@ -37,4 +37,4 @@ jobs:
       - name: Hola Mundo
         run: echo "Hola Mundo $nombre"
       - name: Imprimir salida
-        run: echo ${salida}
+        run: echo "$salida"
