@@ -2,7 +2,8 @@ name: "Deploy Basico" # Nombre del workflow
 
 on:
   workflow_dispatch:
-    branches: ["main"] # Este workflow se activa manualmente cada vez que se hace un push a la rama 'main'
+# push:
+#    branches: ["main"] # Este workflow se activa manualmente cada vez que se hace un push a la rama 'main'
 
 jobs:
   deploy-codigofacilito: # Define un "job" o tarea principal llamada 'deploy-codigofacilito'
