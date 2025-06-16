@@ -5,9 +5,6 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
 
-    outputs:
-      salida: ${{ steps.step_1.outputs.my_variable }}
-
     steps:
       - name: Ejecutar comando antes de la accion
         run: ls -la
@@ -25,11 +22,14 @@ jobs:
       - name: Obtener mensaje
         run: echo "${{ steps.step_1.outputs.my_variable }}"
 
+    outputs:
+      salida: ${{ steps.step_1.outputs.my_variable }}
+
   second-job:
     needs: first-job
     env:
      nombre: Codigo Facilito
-     salida: ${{ needs.first-jobs.outputs.salida }}
+     salida: ${{ needs.first-job.outputs.salida }}
     if: true
     
     runs-on: ubuntu-latest
