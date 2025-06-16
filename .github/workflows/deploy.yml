@@ -46,5 +46,14 @@ jobs:
     steps:
       - name: Hola Mundo
         run: echo "Hola Mundo $nombre"
+
       - name: Imprimir salida
         run: echo "$salida"
+    
+      - name: Descargar artefacto
+        uses: actions/download-artifact@v4
+        with:
+          name: archivo-test
+
+      - name: Cat archivo
+        run: cat test.log
