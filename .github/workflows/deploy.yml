@@ -1,5 +1,8 @@
 name: Mis Workflows
-on: push
+on:
+ # - push            # Se activa cuando hay un 'push' al repositorio
+ # - pull_request    # Se activa cuando hay un 'pull request'
+  - workflow_dispatch # Se activa manualmente desde GitHub Actions
 
 jobs:
   first-job:

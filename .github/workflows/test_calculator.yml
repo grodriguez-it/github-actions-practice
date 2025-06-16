@@ -1,6 +1,9 @@
 name: Run Tests and Upload Artifact
 
-on: [push, pull_request, workflow_dispatch]
+on:
+ # - push            # Se activa cuando hay un 'push' al repositorio
+ # - pull_request    # Se activa cuando hay un 'pull request'
+  - workflow_dispatch # Se activa manualmente desde GitHub Actions
 
 jobs:
   test:
